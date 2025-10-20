@@ -1,0 +1,15 @@
+
+
+def monotonic(l: list):
+    """Return True is list elements are monotonically increasing or decreasing.
+    >>> monotonic([1, 2, 4, 20])
+    True
+    >>> monotonic([1, 20, 4, 10])
+    False
+    >>> monotonic([4, 1, 0, -10])
+    True
+    """
+
+
+First, reason step-by-step privately about the algorithm and tricky cases.
+Then, output ONLY valid Python code that implements `monotonic` — no comments, no prints, no tests.

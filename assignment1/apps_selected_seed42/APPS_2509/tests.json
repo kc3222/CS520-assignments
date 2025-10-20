@@ -1,0 +1,17 @@
+{
+  "fn_name": null,
+  "tests": [
+    {
+      "input": "5 2\n",
+      "output": "7\n"
+    },
+    {
+      "input": "10 0\n",
+      "output": "100\n"
+    },
+    {
+      "input": "31415 9265\n",
+      "output": "287927211\n"
+    }
+  ]
+}

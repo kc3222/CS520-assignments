@@ -1,0 +1,85 @@
+{
+  "fn_name": "validate_number",
+  "tests": [
+    {
+      "input": [
+        "07454876120"
+      ],
+      "output": [
+        "In with a chance"
+      ]
+    },
+    {
+      "input": [
+        "0754876120"
+      ],
+      "output": [
+        "Plenty more fish in the sea"
+      ]
+    },
+    {
+      "input": [
+        "0745--487-61-20"
+      ],
+      "output": [
+        "In with a chance"
+      ]
+    },
+    {
+      "input": [
+        "+447535514555"
+      ],
+      "output": [
+        "In with a chance"
+      ]
+    },
+    {
+      "input": [
+        "-07599-51-4555"
+      ],
+      "output": [
+        "In with a chance"
+      ]
+    },
+    {
+      "input": [
+        "075335440555"
+      ],
+      "output": [
+        "Plenty more fish in the sea"
+      ]
+    },
+    {
+      "input": [
+        "+337535512555"
+      ],
+      "output": [
+        "Plenty more fish in the sea"
+      ]
+    },
+    {
+      "input": [
+        "00535514555"
+      ],
+      "output": [
+        "Plenty more fish in the sea"
+      ]
+    },
+    {
+      "input": [
+        "+447+4435512555"
+      ],
+      "output": [
+        "Plenty more fish in the sea"
+      ]
+    },
+    {
+      "input": [
+        "+44"
+      ],
+      "output": [
+        "Plenty more fish in the sea"
+      ]
+    }
+  ]
+}

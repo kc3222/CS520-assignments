@@ -1,0 +1,48 @@
+You are a careful Python developer.
+
+Write correct, efficient, and readable Python code that solves the problem.
+
+Problem:
+
+Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight.
+
+Your task is to make 'Past' function which returns time converted to milliseconds.
+
+## Example:
+
+```python
+past(0, 1, 1) == 61000
+```
+
+Input constraints: `0 <= h <= 23`, `0 <= m <= 59`, `0 <= s <= 59`
+
+Function name (if you choose a functional solution): past
+
+
+Starter code (optional to use):
+
+def past(h, m, s):
+
+
+Examples (input -> expected output):
+
+---
+Input:
+[0, 1, 1]
+Output:
+[61000]
+
+---
+Input:
+[1, 1, 1]
+Output:
+[3661000]
+
+---
+Input:
+[0, 0, 0]
+Output:
+[0]
+
+
+Return only Python code. Do not include explanations.

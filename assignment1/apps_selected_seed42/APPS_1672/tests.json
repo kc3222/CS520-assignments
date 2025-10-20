@@ -1,0 +1,57 @@
+{
+  "fn_name": null,
+  "tests": [
+    {
+      "input": "6\n10\n10\n10\n01\n10\n10\n",
+      "output": "3\n"
+    },
+    {
+      "input": "4\n01\n01\n10\n10\n",
+      "output": "2\n"
+    },
+    {
+      "input": "1\n10\n",
+      "output": "1\n"
+    },
+    {
+      "input": "2\n01\n10\n",
+      "output": "2\n"
+    },
+    {
+      "input": "2\n10\n10\n",
+      "output": "1\n"
+    },
+    {
+      "input": "3\n10\n01\n10\n",
+      "output": "3\n"
+    },
+    {
+      "input": "1\n01\n",
+      "output": "1\n"
+    },
+    {
+      "input": "2\n01\n01\n",
+      "output": "1\n"
+    },
+    {
+      "input": "2\n10\n01\n",
+      "output": "2\n"
+    },
+    {
+      "input": "3\n01\n01\n01\n",
+      "output": "1\n"
+    },
+    {
+      "input": "3\n10\n10\n01\n",
+      "output": "2\n"
+    },
+    {
+      "input": "3\n01\n10\n10\n",
+      "output": "2\n"
+    },
+    {
+      "input": "115\n10\n10\n10\n10\n01\n01\n10\n10\n10\n01\n01\n10\n01\n01\n10\n10\n10\n01\n10\n01\n10\n10\n01\n01\n10\n10\n10\n10\n01\n10\n01\n01\n10\n10\n10\n10\n01\n10\n10\n10\n01\n10\n01\n10\n10\n10\n10\n01\n01\n01\n10\n10\n01\n01\n01\n10\n10\n01\n10\n01\n01\n01\n01\n10\n10\n01\n10\n01\n01\n01\n01\n01\n10\n01\n10\n10\n01\n01\n01\n10\n01\n01\n10\n10\n01\n01\n01\n01\n01\n10\n01\n10\n01\n10\n01\n01\n01\n10\n01\n10\n10\n01\n10\n10\n01\n01\n01\n10\n10\n10\n10\n10\n10\n10\n10\n",
+      "output": "55\n"
+    }
+  ]
+}

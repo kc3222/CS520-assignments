@@ -1,0 +1,14 @@
+from typing import List
+
+
+def concatenate(strings: List[str]) -> str:
+    """ Concatenate list of strings into a single string
+    >>> concatenate([])
+    ''
+    >>> concatenate(['a', 'b', 'c'])
+    'abc'
+    """
+
+
+First, reason step-by-step privately about the algorithm and tricky cases.
+Then, output ONLY valid Python code that implements `concatenate` — no comments, no prints, no tests.
