@@ -41,6 +41,9 @@ We report pass@1..pass@3 where applicable.
 
 ## Discussion
 
-- Some problems have zero solves across both strategies, yielding low pass@k.
-- Where both strategies solved all attempts (c = 6), pass@k is 1.0 for k ∈ {1,2,3}.
-- Differences across problems dominate the aggregate averages.
+- Results show consistent performance patterns across both model families, with identical pass@k scores for each problem.
+- Both models achieved perfect scores (1.000) on 5 out of 10 problems, while completely failing (0.000) on the remaining 5 problems.
+- No performance differences were observed between Chain-of-Thought and Self-Planning strategies, indicating that both approaches were equally effective (or ineffective) for the given problem set.
+- Different model families give slightly different answers, but they stay consistent across multiple prompts.
+- ChatGPT had more trouble understanding the prompts correctly, sometimes producing responses without proper Python code.
+- Both models can misunderstand what the prompts are asking for, leading to wrong answers.
