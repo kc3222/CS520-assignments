@@ -89,6 +89,18 @@ def round_num(n, m):
         return lower
     return upper
 
+'''part 3'''
+def round_num(n, m):
+    lower = (n // m) * m
+    upper = lower + m
+    
+    if n - lower < upper - n:
+        return lower
+    elif n - lower > upper - n:
+        return upper
+    else:
+        return lower
+
 assert round_num(4722,10)==4720
 assert round_num(1111,5)==1110
 assert round_num(219,2)==218

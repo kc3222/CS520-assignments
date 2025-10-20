@@ -5,7 +5,7 @@ This README summarizes pass@k across two model families and two prompting strate
 
 ### Methodology
 
-Prompts were submitted to ChatGPT and Claude AI through their respective web interfaces. No automated inference code was used - all results were recorded manually by copying responses and evaluating correctness against the provided test cases.
+Prompts were submitted to ChatGPT and Claude AI through their respective web interfaces. No automated inference code was used - all results were recorded manually by copying responses and evaluating correctness against the provided test cases in `test.py` files for each problem.
 
 ### Prompting Strategies Used
 
@@ -55,7 +55,7 @@ We report pass@1..pass@3 where applicable.
 
 ## Part 2: Debugging & Iterative Improvement
 
-This section details the debugging and iterative improvement process for identified failure cases from Part 1.
+This section details the debugging and iterative improvement process for the two failed problems from Part 1: problems 375 and 944.
 
 ### Summary of Debugging Efforts
 
@@ -69,6 +69,8 @@ This section details the debugging and iterative improvement process for identif
 ### Proposed Strategy
 
 **Core Idea**: Combine chain-of-thought reasoning with test-guided self-debugging, where the LLM first reasons through the problem step-by-step, then uses failing test cases to iteratively debug its own output.
+
+**Testing**: The proposed strategy was applied to the same two problems (375 and 944) that were used in Part 2, demonstrating its effectiveness on previously failing cases.
 
 ### Workflow
 
