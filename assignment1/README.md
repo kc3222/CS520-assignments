@@ -51,3 +51,14 @@ We report pass@1..pass@3 where applicable.
 - Different model families give slightly different answers, but they stay consistent across multiple prompts.
 - ChatGPT had more trouble understanding the prompts correctly, sometimes producing responses without proper Python code.
 - Both models can misunderstand what the prompts are asking for, leading to wrong answers.
+
+## Part 2: Debugging & Iterative Improvement
+
+This section details the debugging and iterative improvement process for identified failure cases from Part 1.
+
+### Summary of Debugging Efforts
+
+- **Changes Made**: The primary change involved adding tests directly to the prompt.
+- **What Worked**: Including tests with different cases in the prompt proved effective in improving model performance.
+- **What Didn't Work**: Experimenting with different prompting strategies alone, or adding tests of only similar cases to the prompt, did not yield significant improvements.
+- **Model Behavior**: Both ChatGPT and Claude AI initially failed to correctly understand the problem statements. However, both models successfully generated correct solutions after being provided with relevant test cases within the prompt.
