@@ -80,10 +80,3 @@ This section details the debugging and iterative improvement process for identif
 ### Key Innovation
 
 Unlike baseline strategies that stop after single generation, CoT-SD adds a structured second pass grounded in test feedback, turning passive reasoning into active debugging. This approach is generic and works for any programming problem with known input-output tests.
-
-### Expected Benefits
-
-- Higher pass@1 due to reasoning clarity
-- Additional improvement after debugging phase
-- Better generalization across model families
-- Works with existing prompt → generate → test → refine pipeline
