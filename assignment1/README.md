@@ -1,19 +1,20 @@
-# CS520: Prompt Design & Code Generation – Part 1 Results
+# CS520: Prompt Design & Code Generation
+## Part 1 Results
 
 This README summarizes pass@k across two model families and two prompting strategies (each run with 3 samples). Source: `results.txt`.
 
-## Methodology
+### Methodology
 
 Prompts were submitted to ChatGPT and Claude AI through their respective web interfaces. No automated inference code was used - all results were recorded manually by copying responses and evaluating correctness against the provided test cases.
 
-## Prompting Strategies Used
+### Prompting Strategies Used
 
 - Chain-of-Thought (CoT)
 - Self-Planning
 
 Each strategy generated 3 completions per problem and per model, for a total of 6 samples per model-problem pair.
 
-## How pass@k is computed
+### How pass@k is computed
 
 For a problem with **n** code samples and **c** correct, pass@k is:
 
@@ -23,7 +24,7 @@ For a problem with **n** code samples and **c** correct, pass@k is:
 
 We report pass@1..pass@3 where applicable.
 
-## Per-problem Results
+### Per-problem Results
 
 | ProblemID | claude_pass@1 | claude_pass@2 | claude_pass@3 | gpt_pass@1 | gpt_pass@2 | gpt_pass@3 | notes |
 |---|---|---|---|---|---|---|---|
@@ -38,12 +39,12 @@ We report pass@1..pass@3 where applicable.
 | 677 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | claude: c=0/n=6; gpt: c=0/n=6 |
 | 944 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | claude: c=0/n=6; gpt: c=0/n=6 |
 
-## Averages by Model
+### Averages by Model
 
 - **claude**: pass@1 = 0.500, pass@2 = 0.500, pass@3 = 0.500
 - **gpt**: pass@1 = 0.500, pass@2 = 0.500, pass@3 = 0.500
 
-## Discussion
+### Discussion
 
 - Results show consistent performance patterns across both model families, with identical pass@k scores for each problem.
 - Both models achieved perfect scores (1.000) on 5 out of 10 problems, while completely failing (0.000) on the remaining 5 problems.
@@ -62,3 +63,27 @@ This section details the debugging and iterative improvement process for identif
 - **What Worked**: Including tests with different cases in the prompt proved effective in improving model performance.
 - **What Didn't Work**: Experimenting with different prompting strategies alone, or adding tests of only similar cases to the prompt, did not yield significant improvements.
 - **Model Behavior**: Both ChatGPT and Claude AI initially failed to correctly understand the problem statements. However, both models successfully generated correct solutions after being provided with relevant test cases within the prompt.
+
+## Part 3: Innovation — Chain-of-Thought with Test-Guided Self-Debugging (CoT-SD)
+
+### Proposed Strategy
+
+**Core Idea**: Combine chain-of-thought reasoning with test-guided self-debugging, where the LLM first reasons through the problem step-by-step, then uses failing test cases to iteratively debug its own output.
+
+### Workflow
+
+1. **Chain-of-Thought Generation**: Model reasons step-by-step privately, then outputs clean code
+2. **Test-Guided Walkthrough**: Run generated code against unit tests, capture failures
+3. **Self-Debugging Pass**: Re-prompt with original problem, generated code, and test failures to fix issues
+4. **Verification**: Re-run tests on revised code, keep best-performing version
+
+### Key Innovation
+
+Unlike baseline strategies that stop after single generation, CoT-SD adds a structured second pass grounded in test feedback, turning passive reasoning into active debugging. This approach is generic and works for any programming problem with known input-output tests.
+
+### Expected Benefits
+
+- Higher pass@1 due to reasoning clarity
+- Additional improvement after debugging phase
+- Better generalization across model families
+- Works with existing prompt → generate → test → refine pipeline
