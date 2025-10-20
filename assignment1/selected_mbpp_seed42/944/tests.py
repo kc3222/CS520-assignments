@@ -121,6 +121,22 @@ def num_position(text):
             i += 1
     return i
 
+
+'''Fixed by adding tests'''
+'''chatgpt'''
+def num_position(text):
+    for i, ch in enumerate(text):
+        if ch.isdigit():
+            return i
+    return -1
+
+'''claude'''
+def num_position(text):
+    for i, char in enumerate(text):
+        if char.isdigit():
+            return i
+    return -1
+
 assert num_position("there are 70 flats in this apartment")==10
 assert num_position("every adult have 32 teeth")==17
 assert num_position("isha has 79 chocolates in her bag")==9

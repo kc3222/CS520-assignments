@@ -65,6 +65,30 @@ def round_num(n, m):
         return n
     return round(n / m) * m
 
+'''Fixed by adding tests'''
+'''chatgpt'''
+def round_num(n, m):
+    m_abs = abs(m)
+    if m_abs == 0:
+        return n
+    r = n % m_abs
+    down = n - r
+    up = down + (0 if r == 0 else m_abs)
+    if r > m_abs / 2:
+        return up
+    else:
+        return down
+
+'''claude'''
+def round_num(n, m):
+    if m == 0:
+        return n
+    lower = (n // m) * m
+    upper = lower + m
+    if abs(n - lower) <= abs(n - upper):
+        return lower
+    return upper
+
 assert round_num(4722,10)==4720
 assert round_num(1111,5)==1110
 assert round_num(219,2)==218

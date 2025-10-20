@@ -2,6 +2,10 @@
 
 This README summarizes pass@k across two model families and two prompting strategies (each run with 3 samples). Source: `results.txt`.
 
+## Methodology
+
+Prompts were submitted to ChatGPT and Claude AI through their respective web interfaces. No automated inference code was used - all results were recorded manually by copying responses and evaluating correctness against the provided test cases.
+
 ## Prompting Strategies Used
 
 - Chain-of-Thought (CoT)
