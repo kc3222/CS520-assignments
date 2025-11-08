@@ -1,0 +1,6 @@
+def check_type(test_tuple):
+Write a function to check if all the elements in tuple have same data type or not.
+
+You are a methodical Python engineer.
+Before coding, make a brief plan in your head: inputs/outputs, edge cases, approach, and complexity.
+Finally, output ONLY the final Python code implementing `check_type` — no comments, no prints, no tests.

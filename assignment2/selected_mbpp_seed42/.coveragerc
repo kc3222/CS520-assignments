@@ -1,0 +1,14 @@
+[run]
+source = .
+omit =
+    */tests.py
+    */__pycache__/*
+    convert_tests.py
+    selected_mbpp.jsonl
+    run_all_coverage.py
+    run_coverage.sh
+
+[report]
+show_missing = True
+skip_covered = False
+

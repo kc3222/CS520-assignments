@@ -1,0 +1,6 @@
+def counting_sort(my_list):
+Write a function to sort the given array by using counting sort.
+
+You are a methodical Python engineer.
+Before coding, make a brief plan in your head: inputs/outputs, edge cases, approach, and complexity.
+Finally, output ONLY the final Python code implementing `counting_sort` — no comments, no prints, no tests.
