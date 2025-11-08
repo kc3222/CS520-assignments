@@ -77,7 +77,7 @@ if __name__ == '__main__':
         test_files = [Path(arg) for arg in sys.argv[1:]]
     else:
         # Default: convert all directories with these prefixes
-        prefixes = [54, 151, 222]
+        prefixes = [54, 151, 222, 290, 375, 410, 491, 596, 677, 944]
         test_files = []
         for prefix in prefixes:
             for num in [1, 2, 3, 4]:

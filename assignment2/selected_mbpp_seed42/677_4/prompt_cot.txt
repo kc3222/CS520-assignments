@@ -1,0 +1,6 @@
+def validity_triangle(a,b,c):
+Write a function to check if the triangle is valid or not.
+
+You are a careful Python developer.
+First, reason step by step privately about the algorithm and tricky cases.
+Then, output ONLY valid Python code implementing `validity_triangle` — no comments, no prints, no tests.

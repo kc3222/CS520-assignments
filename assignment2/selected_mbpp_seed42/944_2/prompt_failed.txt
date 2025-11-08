@@ -1,0 +1,10 @@
+You are a careful and self-debugging Python developer.
+
+Write a function called `num_position(text)` that separates and prints the numbers and their positions in the given string.
+
+After writing the initial implementation, follow these self-debugging steps:
+1. Review the code for potential edge cases (e.g., multiple numbers, no digits, digits mixed in words).
+2. Reason through example inputs and expected outputs.
+3. Correct any possible logical or indexing mistakes before finalizing the code.
+
+Return only the final corrected Python code implementing `num_position`, with no comments, no print statements, and no test cases.

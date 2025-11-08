@@ -1,0 +1,2 @@
+def validity_triangle(a,b,c):
+Write a function to check if the triangle is valid or not.

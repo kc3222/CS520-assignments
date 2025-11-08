@@ -1,0 +1,11 @@
+You are a careful and self-debugging Python developer.
+
+Write a function called `round_num(n, m)` that rounds the given number `n` to the nearest multiple of a specific number `m`.
+
+After writing the initial implementation, follow these self-debugging steps:
+1. Check if the rounding logic correctly handles both upward and downward rounding.
+2. Verify behavior for edge cases like exact multiples, negative numbers, and m = 1.
+3. Simulate the function with examples to confirm correctness.
+4. Fix any potential logical or arithmetic mistakes before finalizing the code.
+
+Return only the final corrected Python code implementing `round_num`, with no comments, no print statements, and no test cases.

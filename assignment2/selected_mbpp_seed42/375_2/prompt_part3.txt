@@ -1,0 +1,38 @@
+You are a careful Python developer implementing the function `round_num(n, m)`.
+
+TASK: Write a function to round the given number `n` to the nearest multiple of `m`.
+
+BEFORE CODING - REASON THROUGH:
+1. What does "nearest multiple" mean?
+   - For n=4722, m=10: multiples are ...4710, 4720, 4730...
+   - Which is closest to 4722?
+2. Algorithm approach:
+   - How do you find the lower multiple? (floor division)
+   - How do you find the upper multiple? (add m to lower)
+   - How do you pick which is nearer? (compare distances)
+3. Edge cases:
+   - What if n is already a multiple of m?
+   - What if n is exactly halfway between two multiples?
+
+NOW DEBUG YOUR APPROACH:
+- Walk through: round_num(4722, 10)
+  - Lower multiple: 4720 (distance: 2)
+  - Upper multiple: 4730 (distance: 8)
+  - Nearest: 4720 ✓
+- Walk through: round_num(219, 2)
+  - Lower: 218 (distance: 1)
+  - Upper: 220 (distance: 1)
+  - Nearest: 218 (when tied, round down) ✓
+- Walk through: round_num(4959, 7)
+  - 4959 ÷ 7 = 708.43...
+  - Lower: 708 × 7 = 4956 (distance: 3)
+  - Upper: 709 × 7 = 4963 (distance: 4)
+  - Nearest: 4956 ✓
+- Does your mental algorithm produce these results?
+
+OUTPUT: Only valid Python code implementing `round_num`. No comments, no explanations.
+
+MUST PASS:
+- round_num(4722, 10) == 4720
+- round_num(219, 2) == 218
+- round_num(4959, 7) == 4956

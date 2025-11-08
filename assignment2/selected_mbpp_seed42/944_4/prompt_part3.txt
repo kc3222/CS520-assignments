@@ -1,0 +1,27 @@
+You are a careful Python developer implementing the function `num_position(text)`.
+
+TASK: Write a function to find the position (0-indexed) of the first digit in the string. Return the position as an integer. If no digit exists, return -1.
+
+BEFORE CODING - REASON THROUGH:
+1. Algorithm approach: How will you find the first digit?
+2. Edge cases to handle:
+   - What if the first character is a digit?
+   - What if there are no digits at all?
+   - What if the string is empty?
+3. Common bugs to avoid:
+   - Off-by-one errors in indexing
+   - Forgetting to handle the "no digit found" case
+   - Returning wrong type (string vs int)
+
+NOW DEBUG YOUR APPROACH:
+- Walk through: "there are 70 flats" → position 10 (the '7' in '70')
+- Walk through: "i463kar0q9..." → position 1 (the '4')
+- Walk through: "8v0 uar55..." → position 0 (the '8' at start)
+- Does your mental algorithm produce these results?
+
+OUTPUT: Only valid Python code implementing `num_position`. No comments, no explanations.
+
+MUST PASS:
+- num_position("there are 70 flats in this apartment") == 10
+- num_position("i463kar0q9w3rtkk7r5im0slj736p7edphcda") == 1
+- num_position("8v0 uar55xuatn6glrohfz6bhxawwmc57f") == 0

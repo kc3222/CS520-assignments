@@ -1,0 +1,10 @@
+def num_position(text):
+Write a function to separate and print the numbers and their position of a given string.
+
+You are a careful Python developer.
+First, reason step by step privately about the algorithm and tricky cases.
+Then, output ONLY valid Python code implementing `num_position` — no comments, no prints, no tests.
+Make sure these tests pass:
+- num_position("there are 70 flats in this apartment")==10
+- num_position("i463kar0q9w3rtkk7r5im0slj736p7edphcda") == 1
+- num_position("8v0 uar55xuatn6glrohfz6bhxawwmc57f") == 0

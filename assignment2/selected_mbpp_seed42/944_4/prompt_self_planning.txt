@@ -1,0 +1,6 @@
+def num_position(text):
+Write a function to separate and print the numbers and their position of a given string.
+
+You are a methodical Python engineer.
+Before coding, make a brief plan in your head: inputs/outputs, edge cases, approach, and complexity.
+Finally, output ONLY the final Python code implementing `num_position` — no comments, no prints, no tests.

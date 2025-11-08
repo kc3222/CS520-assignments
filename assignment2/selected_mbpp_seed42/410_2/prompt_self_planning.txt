@@ -1,0 +1,6 @@
+def min_val(listval):
+Write a function to find the minimum value in a given heterogeneous list.
+
+You are a methodical Python engineer.
+Before coding, make a brief plan in your head: inputs/outputs, edge cases, approach, and complexity.
+Finally, output ONLY the final Python code implementing `min_val` — no comments, no prints, no tests.

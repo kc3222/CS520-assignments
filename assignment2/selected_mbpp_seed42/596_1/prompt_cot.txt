@@ -1,0 +1,6 @@
+def tuple_size(tuple_list):
+Write a function to find the size of the given tuple.
+
+You are a careful Python developer.
+First, reason step by step privately about the algorithm and tricky cases.
+Then, output ONLY valid Python code implementing `tuple_size` — no comments, no prints, no tests.

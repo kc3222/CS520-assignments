@@ -1,0 +1,6 @@
+def max_length(list1):
+Write a function to find the list of lists with maximum length.
+
+You are a methodical Python engineer.
+Before coding, make a brief plan in your head: inputs/outputs, edge cases, approach, and complexity.
+Finally, output ONLY the final Python code implementing `max_length` — no comments, no prints, no tests.

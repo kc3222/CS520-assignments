@@ -1,0 +1,6 @@
+def round_num(n,m):
+Write a function to round the given number to the nearest multiple of a specific number.
+
+You are a careful Python developer.
+First, reason step by step privately about the algorithm and tricky cases.
+Then, output ONLY valid Python code implementing `round_num` — no comments, no prints, no tests.
