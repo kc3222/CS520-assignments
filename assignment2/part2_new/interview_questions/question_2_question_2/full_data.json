@@ -1,0 +1,88 @@
+{
+  "prompt": "\nclass Solution:\n    def largestComponentSize(self, A: List[int]) -> int:\n            \"\"\"Given a non-empty array of unique positive integers A, consider the following graph:\n\nThere are A.length nodes, labelled A[0] to A[A.length - 1];\nThere is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.\n\nReturn the size of the largest connected component in the graph.\n \n\n\n\nExample 1:\nInput: [4,6,15,35]\nOutput: 4\n\n\n\nExample 2:\nInput: [20,50,9,63]\nOutput: 2\n\n\n\nExample 3:\nInput: [2,3,6,7,4,12,21,39]\nOutput: 8\n\n\nNote:\n\n1 <= A.length <= 20000\n1 <= A[i] <= 100000\n    \"\"\"\n",
+  "canonical_solution": "from collections import defaultdict\n\n\nclass Solution:\n    MAXPRIME=100001\n    isPrime=[0 for _ in range(MAXPRIME+1)]\n    isPrime[0]=-1;isPrime[1]=-1 #0 and 1 are not prime numbers\n    for i in range(2,MAXPRIME):\n        if isPrime[i]==0: #i is prime\n            for multiple in range(i*i,MAXPRIME+1,i):\n                if isPrime[multiple]==0:\n                    isPrime[multiple]=i\n            isPrime[i] = i\n\n    def largestComponentSize(self, A: List[int]) -> int:\n        label = defaultdict(int)\n\n        def findRoot(key):\n            if label[key] > 0:\n                label[key] = findRoot(label[key])\n                return label[key]\n            else:\n                return key\n        \n        def mergeRoot(k1, k2):\n            r1, r2 = findRoot(k1), findRoot(k2)  \n            if r1 != r2:\n                r1, r2 = min(r1, r2), max(r1, r2)\n                label[r1] += label[r2]\n                label[r2] = r1\n            return r1\n\n        for x in A:\n            root_id = 0\n            prime_factors = set()\n            while Solution.isPrime[x]!=-1:\n                p = Solution.isPrime[x]\n                root_id = findRoot(p) if root_id == 0 else mergeRoot(root_id, p)\n                x //= p\n            label[root_id] -= 1\n        \n        return -min(label.values())\n",
+  "inputs": [
+    [
+      [
+        4,
+        6,
+        15,
+        35
+      ]
+    ]
+  ],
+  "outputs": [
+    [
+      4
+    ]
+  ],
+  "starter_code": "\nclass Solution:\n    def largestComponentSize(self, A: List[int]) -> int:\n        ",
+  "scope": [
+    [
+      "Class Body",
+      4,
+      42
+    ],
+    [
+      "List Comprehension",
+      6,
+      6
+    ],
+    [
+      "For Loop Body",
+      8,
+      13
+    ],
+    [
+      "If Statement Body",
+      9,
+      13
+    ],
+    [
+      "For Loop Body",
+      10,
+      12
+    ],
+    [
+      "If Statement Body",
+      11,
+      12
+    ],
+    [
+      "Function Body",
+      15,
+      42
+    ],
+    [
+      "Function Body",
+      18,
+      23
+    ],
+    [
+      "If Statement Body",
+      19,
+      23
+    ],
+    [
+      "Function Body",
+      25,
+      31
+    ],
+    [
+      "If Statement Body",
+      27,
+      30
+    ],
+    [
+      "For Loop Body",
+      33,
+      40
+    ],
+    [
+      "While Loop Body",
+      36,
+      39
+    ]
+  ],
+  "difficulty": "interview"
+}
