@@ -1,0 +1,6 @@
+def sum_gp(a,n,r):
+Write a function to find the sum of geometric progression series.
+
+You are a careful Python developer.
+First, reason step by step privately about the algorithm and tricky cases.
+Then, output ONLY valid Python code implementing `sum_gp` — no comments, no prints, no tests.
