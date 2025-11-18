@@ -1,0 +1,14 @@
+# 1. If r == 1, the GP sum must be exactly a * n
+assert (r == 1) <= (res == a * n)
+
+# 2. If r != 1, the GP sum must be computed using the closed-form formula
+assert (r != 1) <= (res == a * (1 - r**n) / (1 - r))
+
+# 3. For n == 1, the GP sum must always equal the first term
+assert (n == 1) <= (res == a)
+
+# 4. If a == 0, then the entire geometric progression sums to zero
+assert (a == 0) <= (res == 0)
+
+# 5. For r == 0, the sum is always just the first term a (since later terms are 0)
+assert (r == 0) <= (res == a)

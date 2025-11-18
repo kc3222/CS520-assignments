@@ -1,0 +1,22 @@
+Problem description:
+"Write a function to separate and print the numbers and their position of a given string."
+
+Function signature (Python):
+def num_position(text: str) -> list[tuple[str, int]]
+
+The function should return a list of (character, index) pairs for every character in `text` that is a digit. The index should correspond to the character's position in the original string (0-based).
+
+Please write formal specifications as Python `assert` statements that describe the correct behavior of this function. Let `res` denote the expected return value of this function.
+
+Requirements:
+- The assertions must express the relationship between the input `text` and the result `res`.
+- The assertions must NOT call the function `num_position` inside the assertions.
+- The assertions must NOT use any functions with side effects (no printing, randomness, file I/O, mutation, or timing).
+- Use only pure arithmetic, boolean logic, comparisons, and expressions based on the problem description.
+- Provide about 5 distinct assertions capturing different aspects of the expected behavior.
+
+Assume behavior:
+- The function scans the string from left to right.
+- For every character `c` in `text` where `c.isdigit() == True`, the returned list includes a tuple `(c, index)`.
+- Characters that are not digits are not included.
+- Order of tuples in `res` matches their appearance order in the string.

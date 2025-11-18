@@ -6,3 +6,6 @@ APPS_PLUS_FINAL.json
 REPORT.md
 scrap/*
 /assignment2/part3/README.md
+assignment2/part1/README.md
+assignment2/part2/README.md
+*.pyc

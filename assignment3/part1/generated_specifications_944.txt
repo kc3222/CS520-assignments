@@ -1,0 +1,17 @@
+# 1. Length correctness:
+# The number of returned pairs equals the number of digit characters in text.
+assert len(res) == sum(1 for i in range(len(text)) if text[i].isdigit())
+
+# 2. Every element in res is a (digit_char, index) pair and index is valid.
+assert all(len(t) == 2 and isinstance(t[0], str) and isinstance(t[1], int)
+           and 0 <= t[1] < len(text) and text[t[1]].isdigit()
+           for t in res)
+
+# 3. Order preservation: indices in res must be strictly increasing (left-to-right scan).
+assert all(res[i][1] < res[i + 1][1] for i in range(len(res) - 1))
+
+# 4. Each digit in text appears once with its correct index.
+assert all(res[i][0] == text[res[i][1]] for i in range(len(res)))
+
+# 5. No non-digit characters appear in the result.
+assert all(not (not t[0].isdigit()) for t in res)

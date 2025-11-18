@@ -1,0 +1,18 @@
+Problem description:
+"Write a function to find the sum of a geometric progression series."
+
+Function signature (Python):
+def sum_gp(a: float, n: int, r: float) -> float
+
+Please write formal specifications as Python `assert` statements that describe the correct behavior of this function. Let `res` denote the expected return value of this function.
+
+Requirements:
+- The assertions must express the relationship between the inputs (a, n, r) and the result `res`.
+- The assertions must NOT call the function `sum_gp` inside the assertions.
+- The assertions must NOT use any functions with side effects (no printing, randomness, file I/O, mutation, or timing).
+- Use only pure arithmetic, boolean logic, comparisons, and expressions directly derived from the problem description.
+- Provide about 5 distinct assertions that each capture a different aspect or property of the geometric progression sum.
+
+Assume the standard definition of a geometric progression:
+Sum = a * (1 - r**n) / (1 - r) if r != 1
+Sum = a * n if r == 1
